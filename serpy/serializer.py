@@ -115,10 +115,10 @@ class Serializer(six.with_metaclass(SerializerMeta, SerializerBase)):
                     result = result()
                 if to_value:
                     result = to_value(result)
-                if result is None and required:
-                    raise TypeError('Field {0} is required', name)
-                else:
-                    v[name] = result
+              #  if result is None and required:
+              #     raise TypeError('Field {0} is required', name)
+              #  else:
+                v[name] = result
 
         return v
 
