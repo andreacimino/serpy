@@ -100,6 +100,7 @@ class Serializer(six.with_metaclass(SerializerMeta, SerializerBase)):
         super(Serializer, self).__init__(**kwargs)
         self.instance = instance
         self.many = many
+        self.context = context
         self._data = None
 
     def _serialize(self, instance, fields):
